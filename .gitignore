@@ -3,6 +3,7 @@ target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+.env
 
 ### STS ###
 .apt_generated
@@ -15,5 +16,10 @@ target/
 
 ### VS Code ###
 .vscode/
+
+### MAC OS ###
+.DS_Store
+
+
 
 
