@@ -11,5 +11,9 @@ public class PageController {
     public String HomePage() {
         return "home";
     }
+       @GetMapping("/Jia")
+    public String HomePage() {
+        return "home";
+    }
     
 }
