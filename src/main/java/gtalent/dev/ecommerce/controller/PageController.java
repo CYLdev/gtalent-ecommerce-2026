@@ -17,4 +17,9 @@ public class PageController {
         return "edward";
     }
     
+    @GetMapping("/WWJ")
+    public String WWJPage() {
+        return "WWJ";
+    }
+
 }
