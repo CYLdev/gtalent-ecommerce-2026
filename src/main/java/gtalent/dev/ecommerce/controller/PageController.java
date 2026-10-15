@@ -16,10 +16,25 @@ public class PageController {
     public String EdPage() {
         return "edward";
     }
+
+    @GetMapping("/eager")
+    public String EagerPage() {
+        return "eager";
+    }
+    
+    @GetMapping("/charlie")
+    public String ChPage() {
+        return "charlie";
+    }
     
     @GetMapping("/Jia")
     public String JiaPage() {
         return "jia";
     }
     
+    @GetMapping("/WWJ")
+    public String WWJPage() {
+        return "WWJ";
+    }
+
 }
