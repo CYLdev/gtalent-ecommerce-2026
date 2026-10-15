@@ -11,5 +11,10 @@ public class PageController {
     public String HomePage() {
         return "home";
     }
+
+    @GetMapping("/edward")
+    public String EdPage() {
+        return "edward";
+    }
     
 }
