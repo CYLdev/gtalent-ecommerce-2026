@@ -51,12 +51,14 @@ jobs:
           java-version: "21"
           cache: maven
 
-      - name: Build and test
+      - name: Build and test with MySQL and JPA
         env:
           TEST_DB_NAME: gtalent_ecommerce_2026_test
           TEST_DB_PORT: "3306"
           TEST_DB_USERNAME: gtalent_ecommerce_2026_test
           TEST_DB_PASSWORD: ci_test_password
+          SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+          SPRING_JPA_OPEN_IN_VIEW: "false"
           SPRING_FLYWAY_ENABLED: "true"
           SPRING_FLYWAY_VALIDATE_ON_MIGRATE: "true"
           SPRING_FLYWAY_CLEAN_DISABLED: "true"

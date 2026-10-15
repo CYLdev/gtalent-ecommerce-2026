@@ -1,22 +1,24 @@
 package gtalent.dev.ecommerce;
 
+import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.jdbc.core.JdbcTemplate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 class EcommerceApplicationTests {
 	@Autowired
-	private JdbcTemplate jdbcTemplate;
+	private EntityManager entityManager;
 
 	@Test
 	void contextLoads() {
-		Integer result = jdbcTemplate.queryForObject("SELECT 1", Integer.class);
+		Number result = (Number) entityManager
+				.createNativeQuery("SELECT 1")
+				.getSingleResult();
 
-		assertThat(result).isEqualTo(1);
+		assertThat(result.intValue()).isEqualTo(1);
 	}
 
 }
