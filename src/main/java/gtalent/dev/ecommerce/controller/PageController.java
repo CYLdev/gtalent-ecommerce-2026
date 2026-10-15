@@ -27,6 +27,11 @@ public class PageController {
         return "charlie";
     }
     
+    @GetMapping("/Jia")
+    public String JiaPage() {
+        return "jia";
+    }
+    
     @GetMapping("/WWJ")
     public String WWJPage() {
         return "WWJ";
