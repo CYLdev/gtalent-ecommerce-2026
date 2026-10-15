@@ -16,5 +16,9 @@ public class PageController {
     public String EdPage() {
         return "edward";
     }
+    @GetMapping("/CYL")
+    public String CylPage() {
+        return "CYL";
+    }
     
 }
