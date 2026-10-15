@@ -20,6 +20,7 @@ public class PageController {
     @GetMapping("/eager")
     public String EagerPage() {
         return "eager";
+    }
     
     @GetMapping("/charlie")
     public String ChPage() {
